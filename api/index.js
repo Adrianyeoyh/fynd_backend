@@ -21,10 +21,10 @@ app.use(cors({origin: ['https://localhost:5173',FE_ENDPOINT],
 }));
 
 app.get('/',(req,res) => {
-    res.status(200).send("ok")
+    res.status(200).send("Express on Vercel")
 })
 
-let apiRouter = require('./src/routes/index');
+let apiRouter = require('../src/routes/index');
 app.use('/',apiRouter);
 
 
